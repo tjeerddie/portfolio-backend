@@ -1,0 +1,7 @@
+[flake8]
+per-file-ignores =
+    # Ignore un-used imports in init files.
+    **/__init__.py:F401
+    **/migrations/**:E501
+    **/tests/**:E501
+    **/settings.py:E501
