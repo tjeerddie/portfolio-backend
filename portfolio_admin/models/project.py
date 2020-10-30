@@ -5,7 +5,9 @@ from .portfolio import Portfolio
 
 
 class Project(TimeStampedModel):
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+    portfolio = models.ForeignKey(
+        Portfolio, related_name="projects", on_delete=models.CASCADE
+    )
     name = models.CharField(max_length=120)
     company = models.CharField(max_length=120)
     position = models.CharField(max_length=120)

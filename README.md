@@ -23,7 +23,8 @@ for now there is only a `poetry` setup, I do want to add `docker` at some point.
 6. (optional/add your own fixture) Adding pre-defined data using fixtures:
    1. In poetry shell: `py manage.py loaddata FILE` where `FILE` is the file in the fixture folder.
    2. With poetry run: `poetry run py manage.py loaddata FILE`.
-7. Running the project:
+7. create a super user with `py manage.py createsuperuser`.
+8. Running the project:
    1. In poetry shell: `py manage.py runserver`.
    2. With poetry run: `poetry run py manage.py runserver`.
 
