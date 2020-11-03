@@ -17,6 +17,7 @@ class Project(TimeStampedModel):
     start_date = models.DateField()
     end_date = models.DateField()
     private = models.BooleanField(default=True)
+    skills = models.ManyToManyField("Skill", related_name="projects")
 
     class Meta:
         verbose_name = _("Project")
