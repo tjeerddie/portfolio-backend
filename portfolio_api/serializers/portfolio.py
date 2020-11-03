@@ -6,10 +6,10 @@ view_name = "portfolio-projects-list"
 
 
 class PortfolioSerializer(serializers.ModelSerializer):
-    projects = serializers.SerializerMethodField()
+    projects_url = serializers.SerializerMethodField()
 
-    def get_projects(self, instance):
-        url_kwargs = {'portfolio_pk': instance.name}
+    def get_projects_url(self, instance):
+        url_kwargs = {'portfolio_pk': instance.name.replace(" ", "_")}
         return reverse(
             view_name, kwargs=url_kwargs, request=self.context["request"]
         )

@@ -1,4 +1,3 @@
-from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
@@ -10,7 +9,9 @@ class PortfolioViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PortfolioSerializer
 
     def retrieve(self, request, pk):
-        portfolio = get_object_or_404(Portfolio, name=pk, private=False)
+        name = pk.replace("_", " ")
+        portfolio = get_object_or_404(
+            Portfolio, name__iexact=name, private=False)
         serializer = self.serializer_class(
             portfolio, context={'request': request},
         )
