@@ -23,9 +23,9 @@ portfolio_router.register(
 )
 
 portfolio_router.register(
-    r"media_profiles",
+    r"profiles",
     MediaProfileViewSet,
-    basename="portfolio-media-profiles",
+    basename="portfolio-profiles",
 )
 
 # Wire up our API using automatic URL routing.
