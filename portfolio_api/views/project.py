@@ -9,5 +9,6 @@ class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self):
         name = self.kwargs["portfolio_pk"].replace("_", " ")
         return Project.objects.filter(
-            portfolio__name=name
+            portfolio__name=name,
+            private=False
         )
