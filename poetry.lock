@@ -105,6 +105,18 @@ django = ">=2.2"
 
 [[package]]
 category = "main"
+description = "Nested resources for the Django Rest Framework"
+name = "drf-nested-routers"
+optional = false
+python-versions = ">=3.5"
+version = "0.92.1"
+
+[package.dependencies]
+Django = ">=1.11"
+djangorestframework = ">=3.6.0"
+
+[[package]]
+category = "main"
 description = "the modular source code checker: pep8 pyflakes and co"
 name = "flake8"
 optional = false
@@ -257,7 +269,7 @@ python-versions = "*"
 version = "3.7.4.3"
 
 [metadata]
-content-hash = "5618e0361420187d33a50fdd189a907a07345ce8242f48c299d4561fbc6c81a7"
+content-hash = "4367748f44003a7bdae71362b51b21372e79e624689d3f8af24b93bde9d7b5e4"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -292,6 +304,10 @@ django-imagekit = [
 djangorestframework = [
     {file = "djangorestframework-3.12.1-py3-none-any.whl", hash = "sha256:5c5071fcbad6dce16f566d492015c829ddb0df42965d488b878594aabc3aed21"},
     {file = "djangorestframework-3.12.1.tar.gz", hash = "sha256:d54452aedebb4b650254ca092f9f4f5df947cb1de6ab245d817b08b4f4156249"},
+]
+drf-nested-routers = [
+    {file = "drf-nested-routers-0.92.1.tar.gz", hash = "sha256:e043fc937f94ac462a92d2d9fc9a7e55710a67164b558442adfe9634fc519c3b"},
+    {file = "drf_nested_routers-0.92.1-py2.py3-none-any.whl", hash = "sha256:52be428b046078ed21e9137167035cc2eb8daad036900fd2235ce026306e143a"},
 ]
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
