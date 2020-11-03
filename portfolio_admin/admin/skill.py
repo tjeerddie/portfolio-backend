@@ -10,13 +10,12 @@ class SkillAdmin(admin.ModelAdmin):
     list_display = ("name", "summary", "view_projects_link")
 
     def view_projects_link(self, obj):
-        print(obj.projects)
         count = obj.projects.count()
         url = (
             reverse("admin:portfolio_admin_project_changelist")
             + "?"
             + urlencode({"skills__id": f"{obj.id}"})
         )
-        return format_html('<a href="{}">{} Projects</a>', url, count)
+        return format_html(f'<a href="{url}">{count} Projects</a>')
 
     view_projects_link.short_description = "Projects"

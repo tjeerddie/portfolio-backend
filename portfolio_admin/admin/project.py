@@ -17,6 +17,6 @@ class ProjectAdmin(admin.ModelAdmin):
             + "?"
             + urlencode({"projects__id": f"{obj.id}"})
         )
-        return format_html('<a href="{}">{} Skills</a>', url, count)
+        return format_html(f'<a href="{url}">{count} Skills</a>')
 
     view_skills_link.short_description = "Skills"
