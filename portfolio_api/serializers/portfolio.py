@@ -16,4 +16,4 @@ class PortfolioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Portfolio
-        exclude = ['user', 'created_at', 'updated_at']
+        exclude = ['user', 'created_at', 'updated_at', 'private']
